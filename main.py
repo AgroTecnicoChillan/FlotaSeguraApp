@@ -466,5 +466,6 @@ def main(page: ft.Page):
     app.main(page)
 
 
+
 if __name__ == "__main__":
-    ft.app(target=main)
+    ft.app(target=main,  assets_dir="images")
