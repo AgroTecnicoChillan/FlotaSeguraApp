@@ -1,0 +1,10 @@
+# render.yaml
+services:
+  - type: web
+    name: FlotaSeguraApp # Este es el nombre de tu app en Render
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py # Asumo que tu archivo principal se llama main.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.x # Usa una versión reciente de Python que sea compatible con Flet
