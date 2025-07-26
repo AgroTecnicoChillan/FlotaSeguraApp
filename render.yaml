@@ -1,10 +1,13 @@
-# render.yaml
 services:
   - type: web
-    name: FlotaSeguraApp # Este es el nombre de tu app en Render
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python main.py # Asumo que tu archivo principal se llama main.py
+    name: flotaseguraapp
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "flet run main.py --host 0.0.0.0 --port $PORT"
     envVars:
-      - key: PYTHON_VERSION
-        value: 3.10.x # Usa una versión reciente de Python que sea compatible con Flet
+      - key: FLET_VERSION
+        value: 0.28.3
+
+static_files:
+  - path: /assets
+    url_prefix: /assets
