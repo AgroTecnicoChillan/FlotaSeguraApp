@@ -469,6 +469,7 @@ def main(page: ft.Page):
 if __name__ == "__main__":
      ft.app(target=main, assets_dir="assets", view=ft.AppView.WEB_BROWSER)
 
-# Función para iniciar la app    
+# Función para iniciar la app 
+
 
                   
