@@ -63,7 +63,7 @@ class FleetMaintenanceApp:
             self.build_dashboard()
 
         welcome_view = ft.Column([
-            ft.Image(src="/assets/logoFlota.jpeg", width=650),
+            ft.Image(src="assets/logoFlota.jpeg", width=650),
             ft.Text("Sistema inteligente de control de mantenciones de flotas", size=25, color=ft.Colors.GREY_50),
             ft.ElevatedButton(text="INICIAR FlotaSegura",
                               icon=ft.Icons.LOCAL_SHIPPING,
@@ -467,5 +467,5 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-     ft.app(target=main, assets_dir=assets", view=ft.AppView.WEB_BROWSER)
+     ft.app(target=main, assets_dir="assets", view=ft.AppView.WEB_BROWSER)
                   
