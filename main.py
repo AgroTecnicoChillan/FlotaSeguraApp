@@ -63,7 +63,7 @@ class FleetMaintenanceApp:
             self.build_dashboard()
 
         welcome_view = ft.Column([
-            ft.Image(src="assets/logoFlota.jpeg", width=650),
+            ft.Image(src="/assets/logoFlota.jpeg", width=650),
             ft.Text("Sistema inteligente de control de mantenciones de flotas", size=25, color=ft.Colors.GREY_50),
             ft.ElevatedButton(text="INICIAR FlotaSegura",
                               icon=ft.Icons.LOCAL_SHIPPING,
