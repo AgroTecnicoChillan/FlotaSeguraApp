@@ -472,6 +472,9 @@ if __name__ == "__main__":
 # Función para iniciar la app
 
 
+def greet_user(name):
+    return f"Hola, {name}! Bienvenido a FlotaSegura. Aquí podrás gestionar el mantenimiento de tu flota de vehículos de manera eficiente y sencilla."
+
 
 
 
