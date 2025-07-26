@@ -39,13 +39,13 @@ class FleetMaintenanceApp:
 
     def create_sample_vehicles(self):
         return [
-            Vehicle(1, "Camión Mercedes 001", "Camión", 4800, datetime.now() - timedelta(days=15), "images/camion1.jpg",
+            Vehicle(1, "Camión Mercedes 001", "Camión", 4800, datetime.now() - timedelta(days=15), "assets/camion1.jpg",
                     "Carlos Muñoz", "Actros 1845", "OM471", "Preventiva", "15W-40", 450000, "Sin observaciones."),
-            Vehicle(2, "Bus Volvo 002", "Bus", 5200, datetime.now() - timedelta(days=35), "images/bus1.jpg",
+            Vehicle(2, "Bus Volvo 002", "Bus", 5200, datetime.now() - timedelta(days=35), "assets/bus1.jpg",
                     "Juan Pérez", "Volvo B11R", "D11K460", "Correctiva", "10W-30", 600000, "Reemplazo de filtros."),
-            Vehicle(3, "Camión Scania 003", "Camión", 3500, datetime.now() - timedelta(days=8), "images/camion2.jpg",
+            Vehicle(3, "Camión Scania 003", "Camión", 3500, datetime.now() - timedelta(days=8), "assets/camion2.jpg",
                     "Andrea Soto", "R450", "DC13", "Preventiva", "15W-40", 420000, "Mantenimiento programado."),
-            Vehicle(4, "Bus Mercedes 004", "Bus", 5800, datetime.now() - timedelta(days=45), "images/bus2.jpg",
+            Vehicle(4, "Bus Mercedes 004", "Bus", 5800, datetime.now() - timedelta(days=45), "assets/bus2.jpg",
                     "Pedro Díaz", "O500RS", "OM457", "Correctiva", "10W-40", 550000, "Revisión por ruido en motor.")
         ]
 
@@ -63,7 +63,7 @@ class FleetMaintenanceApp:
             self.build_dashboard()
 
         welcome_view = ft.Column([
-            ft.Image(src="/images/logoFlota.jpeg", width=650),
+            ft.Image(src="/assets/logoFlota.jpeg", width=650),
             ft.Text("Sistema inteligente de control de mantenciones de flotas", size=25, color=ft.Colors.GREY_50),
             ft.ElevatedButton(text="INICIAR FlotaSegura",
                               icon=ft.Icons.LOCAL_SHIPPING,
@@ -386,11 +386,11 @@ class FleetMaintenanceApp:
                 fecha_ingreso_val = "Sin registro"
 
             if tipo_field.value == "Camión":
-                image_path = "images/camion.jpg"
+                image_path = "assets/camion.jpg"
             elif tipo_field.value == "Bus":
-                image_path = "images/bus.png"
+                image_path = "assets/bus.png"
             else:
-                image_path = "images/logoFlota.jpeg"
+                image_path = "assets/logoFlota.jpeg"
 
             nuevo = Vehicle(
                 id=len(self.vehicles) + 1,
@@ -467,5 +467,5 @@ def main(page: ft.Page):
 
 
 if __name__ == "__main__":
-     ft.app(target=main,  assets_dir="images", view=ft.AppView.WEB_BROWSER)
+     ft.app(target=main, assets_dir=assets", view=ft.AppView.WEB_BROWSER)
                   
