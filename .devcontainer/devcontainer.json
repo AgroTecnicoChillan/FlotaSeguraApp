@@ -1,14 +1,1 @@
-echo '{
-  "name": "Python Environment",
-  "dockerFile": "Dockerfile",
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "ms-python.python",
-        "ms-python.vscode-pylance",
-        "ms-azuretools.vscode-docker",
-        "eamodio.gitlens"
-      ]
-    }
-  }
-}' > .devcontainer/devcontainer.json
+{ "name": "Python Environment", "dockerFile": "Dockerfile" }
