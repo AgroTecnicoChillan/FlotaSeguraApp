@@ -1,6 +1,6 @@
-{
+echo '{
   "name": "Python Environment",
-  "image": "mcr.microsoft.com/devcontainers/python:0-3.10",
+  "dockerFile": "Dockerfile",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -11,4 +11,4 @@
       ]
     }
   }
-}
+}' > .devcontainer/devcontainer.json
